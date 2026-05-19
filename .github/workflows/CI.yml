@@ -28,11 +28,11 @@ jobs:
             echo "Waiting for MongoDB..."
             sleep 2
           done
-            echo "MongoDB is up"
+          echo "MongoDB is up"
 
       - name: Seeding Data
         working-directory: ./backend
-        run:
+        run: |
           npm install
           node seedTasksData.js
   test:
